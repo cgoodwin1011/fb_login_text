@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Trains Running On Time</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=Orbitron|Roboto+Mono|Italianno" rel="stylesheet">
+  <!-- reset browser styles -->
+  <link rel="assets/stylesheet" type="text/css" media="screen" href="styles/reset.css" />
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- <script scr="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.js"></script> -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script> -->
+
+  <script src="scripts/main.js"></script>
+
+</head>
+
+<body>
+  <script>
+    window.fbAsyncInit = function () {
+      console.log("hi!")
+      FB.init({
+        appId: '168983963786587',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v3.0'
+      });
+      
+      FB.getLoginStatus(function (response) {
+        console.log(response);
+        // statusChangeCallback(response);
+      
+    });
+
+  };
+
+
+
+    (function (d, s, id) {
+      console.log("hello you")
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+
+    // FB.ui({
+    //   method: 'share',
+    //   href: 'https://developers.facebook.com/docs/'
+    // }, function (response) {});
+
+
+  </script>
+  <header>
+  </header>
+  <div id="wrapper" class="container">
+  </div>
+
+  <script>
+  </script>
+
+</body>
+
+</html>
