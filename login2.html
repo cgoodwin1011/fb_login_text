@@ -41,6 +41,13 @@
         console.log(response);
         // statusChangeCallback(response);
       
+        FB.ui({
+      method: 'share',
+      href: 'https://developers.facebook.com/docs/'
+    }, function (response) {});
+
+
+
     });
 
   };
@@ -58,11 +65,6 @@
       js.src = "https://connect.facebook.net/en_US/sdk.js";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
-    FB.ui({
-      method: 'share',
-      href: 'https://developers.facebook.com/docs/'
-    }, function (response) {});
 
 
 
