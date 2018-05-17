@@ -83,6 +83,11 @@
   <script>
     $("#hi").on("click", function() {
       console.log("clicked hi");
+      FB.getLoginStatus(function (response) {
+      // console.log(response);
+      // statusChangeCallback(response);
+      console.log("login status returns ",response);
+      });
     })
 
   </script>
