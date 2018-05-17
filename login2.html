@@ -46,9 +46,6 @@
       
     };
 
-
-
-
     (function (d, s, id) {
       console.log("hello you")
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -79,11 +76,15 @@
       }(document, 'script', 'facebook-jssdk'));
     </script>
     <div class="fb-login-button" data-width="100px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
-    <button type="button">Hi</button>
+    <button id="hi" type="button">Hi</button>
 
   </div>
 
   <script>
+    $("#hi").on("click", function() {
+      console.log("clicked hi");
+    })
+
   </script>
 
 </body>
