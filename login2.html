@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-<head> 
+<head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Trains Running On Time</title>
@@ -28,8 +28,6 @@
 
 <body>
   <script>
-
-
     window.fbAsyncInit = function () {
       console.log("hi!")
       FB.init({
@@ -39,13 +37,13 @@
         version: 'v3.0'
       });
       FB.getLoginStatus(function (response) {
-      // console.log(response);
-      // statusChangeCallback(response);
-      console.log("login status returns ",response);
+        // console.log(response);
+        // statusChangeCallback(response);
+        console.log("login status returns ", response);
       });
 
 
-      
+
     };
 
     (function (d, s, id) {
@@ -61,7 +59,6 @@
       fjs.parentNode.insertBefore(js, fjs);
       console.log(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-
   </script>
   <header>
   </header>
@@ -79,21 +76,30 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-    <div class="fb-login-button" data-width="100px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="true"></div>
+    <div class="fb-login-button" data-width="100px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false"
+      data-auto-logout-link="false" data-use-continue-as="true"></div>
     <button id="hi" type="button">Hi</button>
+    <button id="logout" type="button">Logout</button>
 
   </div>
 
   <script>
-    $("#hi").on("click", function() {
+    $("#hi").on("click", function () {
       console.log("clicked hi");
       FB.getLoginStatus(function (response) {
-      // console.log(response);
-      // statusChangeCallback(response);
-      console.log("login status returns ",response);
+        // console.log(response);
+        // statusChangeCallback(response);
+        console.log("login status returns ", response);
       });
-    })
+    });
 
+    $("#logout").on("click", function () {
+        FB.logout(function (response) {
+          console.log("logging out, res is ", response)
+        });
+      }
+
+    )
   </script>
 
 </body>
