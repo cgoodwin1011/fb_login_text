@@ -98,6 +98,8 @@
         function (response) {
           if (response && !response.error) {
             console.log("friends list is ",response)
+          } else {
+            console.log("err is", response.error)
           }
         }
       );
