@@ -92,7 +92,7 @@
         console.log("login status returns ", response);
       });
       FB.api('/me', {
-        fields: 'last_name'
+        fields: 'last_name', 'friends'
       }, function (response) {
         console.log(response);
       });
