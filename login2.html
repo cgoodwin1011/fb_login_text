@@ -91,6 +91,11 @@
         // statusChangeCallback(response);
         console.log("login status returns ", response);
       });
+      FB.api('/me', {
+        fields: 'last_name'
+      }, function (response) {
+        console.log(response);
+      });
     });
 
     $("#logout").on("click", function () {
