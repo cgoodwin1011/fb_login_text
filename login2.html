@@ -41,9 +41,6 @@
         // statusChangeCallback(response);
         console.log("login status returns ", response);
       });
-
-
-
     };
 
     (function (d, s, id) {
@@ -93,10 +90,17 @@
       });
       FB.api('/me', {
         fields: 'last_name',
-        email: 'email'
       }, function (response) {
         console.log(response);
       });
+      FB.api(
+        "/{friend-list-id}",
+        function (response) {
+          if (response && !response.error) {
+            console.log(response)
+          }
+        }
+      );
     });
 
     $("#logout").on("click", function () {
