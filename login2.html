@@ -61,9 +61,10 @@
   </header>
   <div id="wrapper" class="container">
     <div id="fb-root"></div>
-    
+
     <div class="fb-login-button" data-width="100px" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false"
       data-auto-logout-link="false" data-use-continue-as="true"></div>
+    <button id="another-login" type="button">FB login</button>
     <button id="hi" type="button">Hi</button>
     <button id="logout" type="button">Logout</button>
 
@@ -87,13 +88,23 @@
         "/10213661125614893",
         function (response) {
           if (response && !response.error) {
-            console.log("friends list is ",response)
+            console.log("friends list is ", response)
           } else {
             console.log("err is", response.error)
           }
         }
       );
     });
+
+
+    $("#another-login"),
+      function () {
+        FB.login(function (response) {
+          console.log(response)
+        }, {
+          scope: 'public_profile,email'
+        });
+      }
 
     $("#logout").on("click", function () {
         FB.logout(function (response) {
